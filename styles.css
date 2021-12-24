@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  .content_main {
+  .container_main {
     padding: 0 1.5rem
   }
   .hide_item {
