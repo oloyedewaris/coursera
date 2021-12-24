@@ -1,0 +1,25 @@
+.header_main {
+  background-color: rgb(192, 108, 192);
+  color: white;
+}
+.content_main {
+  padding: 0 10em
+}
+
+.footer_main {
+  background-color: rgb(202, 174, 193);
+  padding: 1em 0;
+}
+
+.hide_item {
+  display: visible;
+}
+
+@media screen and (max-width: 700px) {
+  .content_main {
+    padding: 0 2rem
+  }
+  .hide_item {
+    display: none;
+  }
+}
