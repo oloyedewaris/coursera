@@ -2,7 +2,7 @@
   background-color: rgb(192, 108, 192);
   color: white;
 }
-.content_main {
+.container_main {
   padding: 0 10em
 }
 
@@ -15,9 +15,9 @@
   display: visible;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .content_main {
-    padding: 0 2rem
+    padding: 0 1.5rem
   }
   .hide_item {
     display: none;
