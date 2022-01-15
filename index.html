@@ -10,10 +10,33 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="styles.css">
     <title>Ristorante Con Fusion</title>
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reverse_row {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .hidden-sm {
+            display: visible;
+        }
+
+        @media screen and (max-width: 567px) {
+            .hidden-sm {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm" style="background-color: rgb(108, 0, 170);">
+    <nav class="navbar navbar-dark navbar-expand-sm" style="background-color: rgb(66, 0, 189);">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -40,7 +63,7 @@
         </div>
     </nav>
 
-    <header class="jumbotron header_main">
+    <header class="jumbotron" style="background-color: rgb(182, 94, 255); color: white;">
         <div class="container">
             <div class="row row-header">
                 <div class="col-lg-6 col-sm-12">
@@ -53,25 +76,27 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid" alt="Uthappizza">
                 </div>
                 <div class="col-lg-3 col-sm-12 align-self-center">
-                    <button class="btn btn-block btn-warning">Reserve Table</button>
+                    <button class="btn btn-block btn-sm btn-warning">
+                        <a href="#form" style="color: black">Reserve Table</a>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="row myContainer reverse_row">
+    <div class="m-auto container">
+        <div class="row reverse_row">
             <div class="col-lg-4 col-sm-12 align-self-center" style="margin-bottom: 30px;">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-lg-8 col-sm-12 media">
                 <img alt="pizza" class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png">
                 <div class="media-body">
-                    <div class="row">
-                        <h2>Uthappizza</h2>
-                        <button class="btn btn-lg btn-danger btn-justify">HOT</button>
-                        <button class="btn btn-lg btn-dark btn-justify"
-                            style="border-radius: 50px; margin-left: 5px;">$4.99</button>
+                    <div class="media-heading">
+                        <h2>Uthappizza
+                            <div class="badge btn-danger">HOT</div>
+                            <div class="badge btn-dark" style="border-radius: 50px;">$4.99</div>
+                        </h2>
                     </div>
                     <p class="hidden-sm d-none d-sm-block ">A unique combination of Indian Uthappam (pancake) and
                         Italian pizza, topped
@@ -82,15 +107,18 @@
             </div>
         </div>
 
-        <div class="row myContainer">
+        <div class="dropdown-divider"></div>
+
+        <div class="row">
             <div class="col-lg-4 col-sm-12 align-self-center" style="margin-bottom: 30px;">
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col-lg-8 col-sm-12 media">
                 <div class="media-body">
-                    <div class="row">
-                        <h2>Weekend Grand Buffet</h2>
-                        <button class="btn btn-danger btn-sm btn-justify">NEW</button>
+                    <div class="media-heading">
+                        <h2>Weekend Grand Buffet
+                            <button class="badge btn-danger">NEW</button>
+                        </h2>
                     </div>
                     <p class="hidden-sm">Featuring mouthwatering combinations with a choice of five different salads,
                         six enticing
@@ -102,7 +130,9 @@
             </div>
         </div>
 
-        <div class="row myContainer reverse_row">
+        <div class="dropdown-divider"></div>
+
+        <div class="row reverse_row">
             <div class="col-lg-4 col-sm-12 align-self-center" style="margin-bottom: 30px;">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
@@ -120,7 +150,9 @@
             </div>
         </div>
 
-        <div class="row myContainer">
+        <div class="dropdown-divider"></div>
+
+        <div id="form" class="row">
             <div class="col-lg-2 col-sm-12"></div>
             <div class="col-lg-8 col-sm-12">
                 <form class="card justify-content-center">
@@ -178,10 +210,10 @@
         </div>
     </div>
 
-    <footer class="footer footer_main">
+    <footer class="footer" style="background-color: rgb(202, 174, 193);">
         <div class="container">
             <div class="row">
-                <div class="col-4 col-lg-2 col-sm-4 align-self-center">
+                <div class="col-4 col-lg-2 col-sm-4">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
@@ -190,7 +222,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-8 col-lg-5 col-sm-8 align-self-center">
+                <div class="col-8 col-lg-5 col-sm-8">
                     <h5>Our Address</h5>
                     <address>
                         121, Clear Water Bay Road<br>
